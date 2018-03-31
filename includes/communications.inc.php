@@ -55,9 +55,9 @@ require_once 'mysql.inc.php';
 ?>
 </table>
 </div>
- <p class='tagcopyright'><?php echo FOOTER_TEXT?></p>
+ <!-- <p class='tagcopyright'><?php echo FOOTER_TEXT?></p> -->
 <?php
-//require_once 'footer.inc.php';
+  require_once 'footer.inc.php';
 ?>
 </body>
 </html>

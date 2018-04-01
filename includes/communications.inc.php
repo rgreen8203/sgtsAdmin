@@ -38,8 +38,8 @@ require_once 'mysql.inc.php';
     
     $buttonArea = "<form method='post' action='#'>" .
     "<input type='hidden' name='reckey' value='$reckey'>" .
-    "<input class='button bSmall' name='edit' type='submit' value='[E]'>" .
-    "<input class='button bSmall' name='delete' type='submit' value='[D]'>" .
+    "<input class='button bSmall' name='edit' type='submit' value='[e]'>" .
+    "<input class='button bSmall' name='delete' type='submit' value='[d]'>" .
     "</form> ";
   
     echo "<tr>";

@@ -33,7 +33,7 @@ require_once 'mysql.inc.php';
 
 <?php   
   foreach ($rows as $row) {
-    $reckey    = $row['CommunicationID'];
+    $reckey    = $row['communication_id'];
     
     
     $buttonArea = "<form method='post' action='#'>" .
@@ -48,7 +48,7 @@ require_once 'mysql.inc.php';
     echo  "<td>" . $row['status_enum'] ."</td>";
     echo  "<td>" . $row['message_time'] ."</td>";
     echo  "<td>" . $row['sender'] ."</td>";
-    echo  "<td>" . $row['rRecipient'] ."</td>";
+    echo  "<td>" . $row['recipient'] ."</td>";
     echo  "<td>" . $row['message'] ."</td>";
     echo "</tr>";
   }

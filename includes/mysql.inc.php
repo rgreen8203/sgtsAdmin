@@ -72,11 +72,16 @@ function db_select($query)
 // --
 // -- Save Information from the Contact form
 // --
-function save_contact_message($email, $comment) {  
+function save_contact_message($iEmail, $iComment) {  
   
   // grab the number of characters in the message in case we want to limit the size
-  // or split it across multiple database entries by using the 'Sequence' column
-  $msize = strlen($comment);
+  // or split it across multiple database entries by using the 'line_sequence' column
+  $msize = strlen($iComment);
+  
+  // cleanse values before attempting db insert
+  $connection = db_connect();
+  $email = mysqli_real_escape_string($connection,$iEmail);
+  $comment = mysqli_real_escape_string($connection,$iComment);
   
   // Explicitly state the column names
   // Will generate an error if the database schema changes
